@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- Latest compiled and minified CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+        <!-- Optional theme -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+        <!-- Latest compiled and minified JavaScript -->
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+        <style>
+            div {
+                border: 0px solid orange;
+            }
+            canvas {
+                height: 300px;
+                width: 100%;
+                border: 0px solid blueviolet;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="row">
+            <div class="col-md-8">
+            <canvas></canvas>
+        </div>
+            <div class="col-md-4">
+            <h3>Settings</h3>
+            <ul class="nav nav-tabs" role="tablist">
+                <li role="presentation" class="active">
+                    <a href="#first_ball" aria-controls="first_ball" role="tab" data-toggle="tab">First Ball</a>
+                </li>
+                <li role="presentation">
+                    <a href="#second_ball" aria-controls="second_ball" role="tab" data-toggle="tab">Second Ball</a>
+                </li>
+            </ul>
+            <div class="tab-content">
+                <div role="tabpanel"class="tab-pane active" id="first_ball">
+                
+                <form>
+                <div class="form-group">
+                    <label>Radius</label>
+                    <input type="text" id="radius" class="form-control">
+                </div>
+                <div class="form-group">
+                    <label>Color(hex)</label>
+                    <input type="text" id="color" class="form-control">
+                </div>
+                <div class="form-group">
+                    <label>Start X</label>
+                    <input type="text" id="startposx" class="form-control">
+                </div>
+                <div class="form-group">
+                    <label>Start Y</label>
+                    <input type="text" id="startposy" class="form-control">
+                </div>
+                <div class="form-group">
+                    <label>Speed X</label>
+                    <input type="text" id="startpos" class="form-control">
+                </div>
+                <div class="form-group">
+                    <label>Speed Y</label>
+                    <input type="text" id="startpos" class="form-control">
+                </div>
+            </form>
+                </div>
+                <div role="tabpanel" class="tab-pane active" id="second_ball">
+                    <h3>It's lonely here...</h3>
+                </div>
+            </div> 
+        </div>
+        </div>
+    </body>
+</html>
