@@ -28,6 +28,13 @@ and open the template in the editor.
                 width: 100%;
                 border: 0px solid blueviolet;
             }
+            #startButton{
+                color:#080;
+            }
+            #stopButton{
+                color: #800;
+                display:none;
+            }
         </style>
     </head>
     <body>
@@ -103,22 +110,14 @@ and open the template in the editor.
                 </div>
             </form>
                 </div>
-                <button id="startButton">Noh TAVAI</button>
+                <button id="startButton" onclick="startGame()">開始!</button>
+                <button id="stopButton" onclick="stopGame()">止!</button>
             </div> 
         </div>
-            <script>
-            $('#startButton').click(function(){
-                var radius1 = $('#radius1').val();
-                console.log(radius1);
-                
-                startGame();
-            });
-            
-            
-            
-            </script>
+
             <script src="js/mygamearea.js"></script>
             <script src="js/startgame.js"></script>
+            <script src="js/stopgame.js"></script>
             <script src="js/updategamearea.js"></script>
             <script src="js/balls.js"></script>
         </div>
