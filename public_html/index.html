@@ -6,7 +6,7 @@ and open the template in the editor.
 -->
 <html>
     <head>
-        <title>TODO supply a title</title>
+        <title>Ball Game UI</title>
         <meta charset="UTF-8">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 
@@ -27,98 +27,99 @@ and open the template in the editor.
                 height: 300px;
                 width: 100%;
                 border: 0px solid blueviolet;
+
+            }
+            #stopButton{
+                display: none;
+                color: red;
+            }
+
+            #startButton{
+                color: green;
             }
         </style>
     </head>
     <body>
         <div class="row">
             <div class="col-md-8" >
-            <canvas id="gameArea"></canvas>
-        </div>
+                <canvas id="gameArea"></canvas>
+            </div>
             <div class="col-md-4">
-            <h3>Settings</h3>
-            <ul class="nav nav-tabs" role="tablist">
-                <li role="presentation" class="active">
-                    <a href="#first_ball" aria-controls="first_ball" role="tab" data-toggle="tab">First Ball</a>
-                </li>
-                <li role="presentation">
-                    <a href="#second_ball" aria-controls="second_ball" role="tab" data-toggle="tab">Second Ball</a>
-                </li>
-            </ul>
-            <div class="tab-content">
-                <div role="tabpanel" class="tab-pane active" id="first_ball">
-                
-                <form>
-                <div class="form-group">
-                    <label>Radius</label>
-                    <input type="text" id="radius1" class="form-control">
-                </div>
-                <div class="form-group">
-                    <label>Color(hex)</label>
-                    <input type="text" id="color1" class="form-control">
-                </div>
-                <div class="form-group">
-                    <label>Start X</label>
-                    <input type="text" id="startposx1" class="form-control">
-                </div>
-                <div class="form-group">
-                    <label>Start Y</label>
-                    <input type="text" id="startposy1" class="form-control">
-                </div>
-                <div class="form-group">
-                    <label>Speed X</label>
-                    <input type="text" id="speedx1" class="form-control">
-                </div>
-                <div class="form-group">
-                    <label>Speed Y</label>
-                    <input type="text" id="speedy1" class="form-control">
-                </div>
-            </form>
-                </div>
-                <div role="tabpanel" class="tab-pane" id="second_ball">
-                    <form>
-                <div class="form-group">
-                    <label>Radius</label>
-                    <input type="text" id="radius2" class="form-control">
-                </div>
-                <div class="form-group">
-                    <label>Color(hex)</label>
-                    <input type="text" id="color2" class="form-control">
-                </div>
-                <div class="form-group">
-                    <label>Start X</label>
-                    <input type="text" id="startposx2" class="form-control">
-                </div>
-                <div class="form-group">
-                    <label>Start Y</label>
-                    <input type="text" id="startposy2" class="form-control">
-                </div>
-                <div class="form-group">
-                    <label>Speed X</label>
-                    <input type="text" id="speedx2" class="form-control">
-                </div>
-                <div class="form-group">
-                    <label>Speed Y</label>
-                    <input type="text" id="speedy2" class="form-control">
-                </div>
-            </form>
-                </div>
-                <button id="startButton">Noh TAVAI</button>
-            </div> 
-        </div>
-            <script>
-            $('#startButton').click(function(){
-                var radius1 = $('#radius1').val();
-                console.log(radius1);
-                
-                startGame();
-            });
-            
-            
-            
-            </script>
+                <h3>Settings</h3>
+                <ul class="nav nav-tabs" role="tablist">
+                    <li role="presentation" class="active">
+                        <a href="#first_ball" aria-controls="first_ball" role="tab" data-toggle="tab">First Ball</a>
+                    </li>
+                    <li role="presentation">
+                        <a href="#second_ball" aria-controls="second_ball" role="tab" data-toggle="tab">Second Ball</a>
+                    </li>
+                </ul>
+                <div class="tab-content">
+                    <div role="tabpanel" class="tab-pane active" id="first_ball">
+
+                        <form>
+                            <div class="form-group">
+                                <label>Radius</label>
+                                <input type="text" id="radius1" class="form-control">
+                            </div>
+                            <div class="form-group">
+                                <label>Color(hex)</label>
+                                <input type="text" id="color1" class="form-control">
+                            </div>
+                            <div class="form-group">
+                                <label>Start X</label>
+                                <input type="text" id="startposx1" class="form-control">
+                            </div>
+                            <div class="form-group">
+                                <label>Start Y</label>
+                                <input type="text" id="startposy1" class="form-control">
+                            </div>
+                            <div class="form-group">
+                                <label>Speed X</label>
+                                <input type="text" id="speedx1" class="form-control">
+                            </div>
+                            <div class="form-group">
+                                <label>Speed Y</label>
+                                <input type="text" id="speedy1" class="form-control">
+                            </div>
+                        </form>
+                    </div>
+                    <div role="tabpanel" class="tab-pane" id="second_ball">
+                        <form>
+                            <div class="form-group">
+                                <label>Radius</label>
+                                <input type="text" id="radius2" class="form-control">
+                            </div>
+                            <div class="form-group">
+                                <label>Color(hex)</label>
+                                <input type="text" id="color2" class="form-control">
+                            </div>
+                            <div class="form-group">
+                                <label>Start X</label>
+                                <input type="text" id="startposx2" class="form-control">
+                            </div>
+                            <div class="form-group">
+                                <label>Start Y</label>
+                                <input type="text" id="startposy2" class="form-control">
+                            </div>
+                            <div class="form-group">
+                                <label>Speed X</label>
+                                <input type="text" id="speedx2" class="form-control">
+                            </div>
+                            <div class="form-group">
+                                <label>Speed Y</label>
+                                <input type="text" id="speedy2" class="form-control">
+                            </div>
+                        </form>
+                    </div>
+                    <button id="startButton" onclick="startGame()">Start Game</button>
+                    <button id="stopButton" onclick="stopGame()">Stop Game</button>
+                </div> 
+            </div>
+
             <script src="js/mygamearea.js"></script>
             <script src="js/startgame.js"></script>
+            <script src="js/stopgame.js"></script>
             <script src="js/updategamearea.js"></script>
             <script src="js/balls.js"></script>
         </div>
