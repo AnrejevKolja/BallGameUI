@@ -4,9 +4,9 @@
 
 var myGameArea = {
     canvas: document.getElementById("gameArea"),
-    start: function (inputCWidth, inputCHeight) {
-        this.canvas.width = 600;
-        this.canvas.height = 400;
+    start: function (width, height) {
+        this.canvas.width = width;
+        this.canvas.height = height;
         this.context = this.canvas.getContext("2d");
         // document.body.insertBefore(this.canvas, document.body.childNodes[0]);
         this.interval = setInterval(updateGameArea, 20);

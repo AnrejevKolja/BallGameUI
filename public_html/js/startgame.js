@@ -4,21 +4,14 @@
 
 
 function startGame() {
-    //colors
-    var colorFirst = $('#color1').val();
-    var colorSecond = $('#color2').val();
-    //speed X/Y First Ball
-    var speedXFirst = parseInt($('#speedx1').val());
-    var speedYFirst = parseInt($('#speedy1').val());
-    //speed X/Y Second Ball
-    var speedXSecond = parseInt($('#speedx2').val());
-    var speedYSecond = parseInt($('#speedy2').val());
-    //radius
-    var radius = parseInt($('#radius1').val());
+    formHandler.getFirstBall();
+    formHandler.getSecondBall();
+    formHandler.getGameArea();
 
-    firstBall = new ball(radius, colorFirst, 30 + 1, 30 + 1, speedXFirst, speedYFirst);
-    secondBall = new ball(31 - 1, colorSecond, 600 - 31, 31, -5, 5);
-    myGameArea.start(600, 400);
+    firstBall = new ball(radiusFist, colorFirst, startXFirst, startYFirst, speedXFirst, speedYFirst);
+    // firstBall = new ball (30, "red", 31, 31, 5, 5);
+    secondBall = new ball(radiusSecond, colorSecond, startXSecond, startYSecond, speedXSecond, speedYSecond);
+    myGameArea.start(gameAreaWidth, gameAreaHeight);
     $('#stopButton').show();
     $('#startButton').hide();
 }

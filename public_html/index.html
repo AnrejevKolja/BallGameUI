@@ -24,9 +24,8 @@ and open the template in the editor.
                 border: 0px solid orange;
             }
             canvas {
-                height: 300px;
-                width: 100%;
-                border: 0px solid blueviolet;
+                
+                border: 1px solid blueviolet;
 
             }
             #stopButton{
@@ -53,9 +52,13 @@ and open the template in the editor.
                     <li role="presentation">
                         <a href="#second_ball" aria-controls="second_ball" role="tab" data-toggle="tab">Second Ball</a>
                     </li>
+                    <li role="presentation">
+                        <a href="#game_area" aria-controls="game_area" role="tab" data-toggle="tab">Game Area</a>
+                    </li>
                 </ul>
                 <div class="tab-content">
                     <div role="tabpanel" class="tab-pane active" id="first_ball">
+                        <h3>First Ball</h3>
 
                         <form>
                             <div class="form-group">
@@ -85,6 +88,8 @@ and open the template in the editor.
                         </form>
                     </div>
                     <div role="tabpanel" class="tab-pane" id="second_ball">
+                        <h3>Second Ball</h3>
+                        
                         <form>
                             <div class="form-group">
                                 <label>Radius</label>
@@ -108,10 +113,23 @@ and open the template in the editor.
                             </div>
                             <div class="form-group">
                                 <label>Speed Y</label>
-                                <input type="text" id="speedy2" class="form-control">
+                                <input type="text" id="speedy2" class="form-control">                           
                             </div>
                         </form>
                     </div>
+                            <div role="tabpanel" class="tab-pane" id="game_area">
+                        <h3>Game Area</h3>
+                        <form>
+                            <div class="form-group">
+                                <label>Width:</label>
+                                <input type="text" id="game_area_width" class="form-control">
+                            </div>
+                            <div class="form-group">
+                                <label>Height:</label>
+                                <input type="text" id="game_area_height" class="form-control">
+                            </div>
+                        </form>
+                                        </div>
                     <button id="startButton" onclick="startGame()">Start Game</button>
                     <button id="stopButton" onclick="stopGame()">Stop Game</button>
                 </div> 
@@ -122,6 +140,7 @@ and open the template in the editor.
             <script src="js/stopgame.js"></script>
             <script src="js/updategamearea.js"></script>
             <script src="js/balls.js"></script>
+            <script src="js/formHandler.js"></script>
         </div>
     </body>
 </html>
